@@ -35,5 +35,12 @@ class SpreadSheet extends Document {
 	}
 }
 
-print_r(User::create());
-print_r(SpreadSheet::create());
+// print_r(User::create());
+// print_r(SpreadSheet::create());
+//
+$user_class = new ReflectionClass('User');
+echo $user_class->getName();
+
+echo $user_class->isUserDefined();
+
+echo $user_class->isInstantiable();
