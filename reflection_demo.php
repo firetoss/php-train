@@ -15,10 +15,17 @@ class Product
  **/
 class CdProduct extends Product
 {
+    public $a = '1';
     
     function __construct()
     {
         // code...
+    }
+
+    function &referenceTest()
+    {
+        $this->a = 2;
+        return $this;
     }
 }
 
@@ -59,3 +66,6 @@ function classData(ReflectionClass $class)
 
 $prod_class = new ReflectionClass('CdProduct');
 print classData($prod_class);
+
+$class = new CdProduct();
+print_r($class->referenceTest());
