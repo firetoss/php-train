@@ -1,5 +1,4 @@
 <?php 
-
 abstract class DomainObject {
 	private $_group;
 
